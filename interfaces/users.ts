@@ -1,7 +1,7 @@
 import { Document } from "mongoose";
 import { Products } from "./products";
 
-type Role = 'manager' | 'admin' | 'user'
+type Role = "manager" | "admin" | "user";
 export interface Users extends Document {
   email: string;
   password: string;
@@ -9,15 +9,15 @@ export interface Users extends Document {
   image: string;
   role: Role;
   active: boolean;
-  wishlist:Products[];
+  wishlist: Products[];
   passwordChangedAt: Date | number;
   resetCode: string | undefined;
   resetCodeExpireTime: Date | number | undefined;
   resetCodeVerify: boolean | undefined;
   address: Address[];
 }
-export interface  Address extends Document  {
-  street: string ;
+export interface Address extends Document {
+  street: string;
   city: string;
   country: string;
 }
